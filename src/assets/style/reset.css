@@ -1,0 +1,283 @@
+@charset "utf-8";
+html {
+  color: #333;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 20px;
+  width:100%;
+  height: 100%;
+}
+/**, :before, :after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}*/
+html * {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  font-family:Helvetica;
+  width:100%;
+  height: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+  -webkit-appearance: none;
+}
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: 0;
+  max-width: 100%;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 来自 yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 正常链接 未访问 */
+/* 鼠标悬停 */
+a:hover {
+  text-decoration: underline;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+/*iUi 与页面 preloader*/
+body>section, body>footer {display:none;}
+
+body>section[selected="true"] {
+	display: block;
+  width:100%;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+body >.preloader{
+	position:absolute;
+	width:60px;
+	z-index:9000;
+	display: none;
+}
+.fr{
+    float: right;
+}
+.fl{float: left;}
+.hide{display: none;}
+.clearfix::before,.clearfix::after{display:table;line-height:0;content:"";}
+.clearfix::after{clear:both;}
+.timetips{position:fixed;bottom:-100px;left:50%;z-index:10;margin:0 20px;text-align:center;background-color:rgba(0,0,0,0.5);color:#fff;padding:8px 15px;/*min-width:110px;*/}
+.display-block{display: block;}
+.failed{
+  width:100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  display: none;
+}
+.show{
+  display: block;
+}
+.failed-img{
+  width: 4rem;
+  margin: auto;  
+  display: block;
+}
+.failed-msg{
+    font-size: .8rem;
+    color: #7b7b7b;
+    margin-top: 1rem;
+    text-align: center;
+}
+.show + .dropload-down{
+  display: none;
+}
+.feedback-img{
+  width:3.7rem;
+  margin:auto;
+  display: block;
+  padding-top: 6rem;
+}
+.feedback-msg{
+  margin-top: 1.25rem;
+  width:100%;
+  text-align: center;
+  color:#7b7b7b;
+  font-size: .75rem;
+}
+.feedback-button{
+  width:60%;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: .3rem .3rem 0 0;
+  margin:auto;
+  margin-top:.25rem;
+}
+.feedback-button img{
+   width:.75rem;
+   display: block;
+   margin:auto;
+   padding-top:.2rem;
+}
+.feedback-button p:after{
+   content:attr(data-text);
+   display: block;
+   font-size: .75rem;
+   color:#e2231a;
+   text-align: center;
+   margin-top: .2rem;
+}
+.feedback-button p{
+  position: relative;
+  left:0px;
+  top:7px;
+}
+.feedback-position{
+  width:100%;
+  height: 3rem;
+  border-radius: 0px;
+  background-color:#f6f6f6;
+  left:0px;
+  position: fixed;
+  bottom:0px;
+}
+.dropload-down{
+  text-align: center;
+  margin-top:.5rem;
+}
+
+#failed_null{
+  width: 100%;
+  height: 100%;
+}
+
+section.table_box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.table{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.table_cell{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
